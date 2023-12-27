@@ -335,7 +335,7 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 ```
 
-Setelah data disiapkan selanjutnya saya akan nilai n_neighbors terbaik pada model ini dengan perintah berikut
+Setelah data disiapkan selanjutnya saya akan mencari nilai n_neighbors terbaik pada model ini dengan perintah berikut
 
 ```python
 X_axis = list(range(2, 15))
@@ -397,7 +397,7 @@ Hasilnya adalah "Diabetes" yang berarti prediksi berhasil.
 
 ### Visualisasi hasil algoritma
 
-Selanjutnya kita akan melihat visualisasi hasil dari algoritma KNN dengan perintah berikut :
+Selanjutnya kita akan melihat visualisasi hasil dari algoritma KNN dengan perintah berikut
 
 ```python
 # Fungsi untuk menampilkan plot decision boundary
@@ -449,6 +449,7 @@ plt.xlabel('Predicted label')
 ```
 
 ![](img/concfu.png)
+
 Berdasarkan confusion matrix diatas, dapat disimpulkan bahwa model tersebut memprediksi label dengan benar untuk 120 data positif dan 60 data negatif. Namun, model tersebut juga membuat kesalahan dalam memprediksi label untuk 28 data positif (FP) dan 30 data negatif (FN).
 
 ## Deployment

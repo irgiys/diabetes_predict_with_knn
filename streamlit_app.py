@@ -5,7 +5,7 @@ import streamlit as st
 model = pickle.load(open('diabetes_model.sav', 'rb'))
 
 st.set_page_config(
-    page_title="Prediksi Diabetes",
+    page_title="Prediksi Diabetes | by Irgiys",
     page_icon="🍭",
 )
 
@@ -26,19 +26,19 @@ with col2:
     Pregnancies = st.number_input("Jumlah kehamilan yang pernah dialami", 0,17,1)
   
 with col1:
-    Glucose = st.number_input("Kadar glukosa dalam darah, diukur dalam mg/dL", 0,199,90)
+    Glucose = st.number_input("Kadar glukosa dalam darah, diukur dalam mg/dL", 0,199,85)
 with col2: 
-    BloodPressure = st.number_input("Tekanan darah (mm Hg)", 0,122,61)
+    BloodPressure = st.number_input("Tekanan darah (mm Hg)", 0,122,66)
 
 with col1:
-    SkinThickness = st.number_input("Ketebalan lipatan kulit trisep (mm)", 0,99,0)
+    SkinThickness = st.number_input("Ketebalan lipatan kulit trisep (mm)", 0,99,29)
 with col2: 
     Insulin = st.number_input("Insulin serum (mu U/ml) ", 0,846,79)
 
 with col1:
-    BMI = st.number_input("Body Mass Index (Berat dalam kg/(tinggi dalam  m)²)", 0,67,33)
+    BMI = st.number_input("Body Mass Index (Berat dalam kg/(tinggi dalam  m)²)", 0.0,67.1,26.6)
 with col2: 
-    DiabetesPedigreeFunction = st.number_input("Fungsi pedigri diabetes", 94,200,150)
+    DiabetesPedigreeFunction = st.number_input("Fungsi pedigri diabetes", 0.078,2.42,0.351)
 
 if st.button("Prediksi penyakit Diabetes"):
     heart_disease_predict = model.predict([[
