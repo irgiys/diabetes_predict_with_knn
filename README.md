@@ -8,25 +8,25 @@
 
 ## Domain Proyek
 
-Web App ini sebaiknya digunakan bersama dengan seorang profesional medis agar variabel yang dimasukkan tidak salah atau sembarangan. Web App ini dibuat untuk mempermudah pengguna dalam memprediksi apakah pasien memiliki diabetes atau tidak berdasarkan hasil outputnya. Namun, jika Anda bukan seorang profesional, disarankan untuk berkonsultasi langsung dengan ahli medis.
+Web App ini diciptakan untuk menjadi alat yang membantu individu dalam memeriksa kemungkinan adanya diabetes secara cepat dan mudah. Pentingnya untuk diingat bahwa Web App ini bukan pengganti dari konsultasi medis yang sesungguhnya. Meskipun dapat memberikan gambaran awal, sangat disarankan untuk mendiskusikan hasilnya dengan seorang profesional medis untuk evaluasi dan rekomendasi yang lebih tepat.
 
 ## Business Understanding
 
-Web App ini memungkinkan profesional medis untuk bekerja lebih efisien dan akurat dalam menangani pasien dengan diabetes. Ini membantu dalam mempercepat proses diagnosis dan pengobatan, memungkinkan lebih banyak pasien untuk menerima perhatian yang tepat dari dokter.
+Web App ini bertujuan untuk memberikan aksesibilitas kepada individu untuk memeriksa kemungkinan adanya diabetes. Dengan demikian, dapat mengurangi waktu yang dibutuhkan dalam proses penanganan medis oleh profesional kesehatan.
 
 ### Problem Statement
 
-Peningkatan jumlah kasus diabetes disebabkan oleh pola hidup yang tidak sehat dalam masyarakat modern, yang menyebabkan peningkatan beban kerja bagi para profesional medis dalam menangani pasien.
+Keterbatasan akses atau kesulitan dalam mendapatkan konsultasi medis secara langsung telah menjadi hambatan dalam mengatasi kasus diabetes. Pola hidup yang tidak sehat di masyarakat modern juga telah meningkatkan prevalensi diabetes, menimbulkan tantangan bagi individu untuk mendapatkan evaluasi medis yang tepat dan tepat waktu.
 
 ### Goals
 
-Membantu dokter dan ahli kesehatan dalam menentukan langkah-langkah pengobatan yang tepat bagi pasien yang menderita atau tidak menderita diabetes melalui hasil yang dihasilkan oleh Web App. Hal ini bertujuan untuk memfasilitasi proses diagnosis dan pengobatan dengan lebih efisien, membantu dalam menyediakan perawatan yang lebih baik bagi pasien.
+Menjadi alat bantu bagi individu untuk mengidentifikasi potensi diabetes, membantu dalam proses pencegahan dan pengelolaan dengan konsultasi lebih lanjut kepada ahli medis. Selain itu, memungkinkan pasien untuk mendapatkan perhatian medis lebih awal.
 
 ### Solution Statements
 
--   Memproses data medis dengan cepat dan akurat untuk memprediksi apakah seorang pasien menderita diabetes atau tidak.
--   Memberikan hasil yang jelas dan mudah dipahami kepada dokter atau ahli kesehatan untuk membantu dalam menentukan langkah-langkah pengobatan berikutnya.
--   Meningkatkan efisiensi dalam proses diagnosis sehingga dokter dapat memberikan perawatan yang lebih tepat waktu kepada pasien yang membutuhkan.
+-   Mengolah data medis secara efisien untuk memberikan indikasi awal terkait potensi diabetes pada seseorang.
+-   Menyajikan hasil yang jelas kepada pengguna untuk memberikan pemahaman awal, namun penting untuk didiskusikan lebih lanjut dengan profesional medis.
+-   Membantu mempercepat proses identifikasi diabetes sehingga pengguna dapat mengambil langkah-langkah pencegahan atau pengobatan lebih dini dengan bantuan dokter atau ahli kesehatan.
 
 ## Data Understanding
 
@@ -113,7 +113,7 @@ Setelah file `kaggle.json` diunggah, saya akan membuat direktori `~/.kaggle` dan
 
 ### Unduh datasets
 
-Setelah persiapan Kaggle selesai, saya mengunduhh datasets dengan perintah :
+Setelah persiapan Kaggle selesai, saya mengunduhh datasets dengan perintah
 
 ```python
 !kaggle datasets download -d whenamancodes/predict-diabities
@@ -162,7 +162,7 @@ import warnings; warnings.filterwarnings("ignore"); warnings.simplefilter('ignor
 
 ### Inisialisasi DataFrame
 
-Saya menginisialisi data frame dengan perintah berikut :
+Saya menginisialisi data frame dengan perintah 
 
 ```python
 df = pd.read_csv('/content/predict-diabities/diabetes.csv')
@@ -174,7 +174,7 @@ Kemudian saya menampilkan 5 sampel data teratas.
 df.head()
 ```
 
-Untuk melihat tipe data pada setiap kolom dapat menggunakan perintah berikut :
+Untuk melihat tipe data pada setiap kolom dapat menggunakan perintah 
 
 ```python
 df.info()
@@ -182,15 +182,15 @@ df.info()
 
 ### Data Cleansing
 
-Pada tahap ini saya akan membersikan data yang tidak diperlukan ataupun yang akan mengganggu pada tahap berikutnya. Pertama saya akan menghitung jumlah nilai null (NaN) dalam setiap kolom
+Pada tahap ini saya akan membersikan data yang tidak diperlukan ataupun yang akan mengganggu pada tahap berikutnya. Pertama saya akan menghitung jumlah nilai null (NaN) dalam setiap kolom.
 
 ```python
 df.isnull().sum().sort_values(ascending=False)
 ```
 
-Dan outputnya adalah 0 semua artinya tidak ada data yang null
+Dan outputnya adalah 0 semua artinya tidak ada data yang null.
 
-Selanjutnya saya akan memeriksa data duplikat
+Selanjutnya saya akan memeriksa data duplikat.
 
 ```python
 df.duplicated().sum()
@@ -209,7 +209,7 @@ sns.heatmap(corr_matrix.to_frame(),cmap="coolwarm", annot=True)
 
 ![](img/corr.png)
 
-Selanjutnya saya akan melihat boxplot dari masing-masing feature
+Selanjutnya saya akan melihat boxplot dari masing-masing feature.
 
 ```python
 parameters = list(df.columns.drop(["Outcome"])) # Hapus label
@@ -229,7 +229,7 @@ plt.show()
 
 ![](img/plot_box.png)
 
-Selanjutnya saya akan membuat fungsi untuk menampilkan historgram untuk melihat faktor-faktor pada diabetes
+Selanjutnya saya akan membuat fungsi untuk menampilkan historgram untuk melihat faktor-faktor pada diabetes.
 
 ```python
 def create_hist(outcome_label_1, outcome_label2, title):
@@ -269,7 +269,7 @@ create_hist(Glucose_outcome_1, Glucose_outcome_0, "Glucose")
 ```
 
 ![](img/hist_gluc.png)
-Dari histogram yang diatas dapat kita artikan semakin tinggi glukosa semakin besar kemungkinan diabetes
+Dari histogram yang diatas dapat kita artikan semakin tinggi glukosa semakin besar kemungkinan diabetes.
 
 Selanjutya faktor BMI (Body Mass Index) pada diabetes
 
@@ -314,7 +314,7 @@ Histogram di atas menunjukkan distribusi fungsi pewarisan diabetes berdasarkan h
 
 ## Modeling
 
-Pada tahap ini saya akan membuat feature dari semua kolom kecuali kolom `Outcome` yang dimana akan dijadikan sebagai label dengan perintah berikut :
+Pada tahap ini saya akan membuat feature dari semua kolom kecuali kolom `Outcome` yang dimana akan dijadikan sebagai label dengan perintah 
 
 ```python
 X = df.drop('Outcome',axis=1).values
@@ -369,7 +369,7 @@ plt.show()
 
 ![](img/n_best.png)
 
-Dapat kita lihat score tertinggi berada pada n3 dan kita akan menggunakan 3 untuk model ini untuk akurasi yang lebih baik
+Dapat kita lihat score tertinggi berada pada n3 dan kita akan menggunakan 3 untuk model ini untuk akurasi yang lebih baik.
 
 ```python
 knn_model = KNeighborsClassifier(n_neighbors=3)
@@ -378,7 +378,7 @@ knn_model.fit(X_train, y_train)
 print("Akurasi model KNN =", knn_model.score(X_test,y_test))
 ```
 
-Dan akurasi yang didapatkan yaitu 0.74 atau 74% yang dimana cukup untuk model prediksi
+Dan akurasi yang didapatkan yaitu 0.74 atau 74% yang dimana cukup untuk model prediksi.
 
 Selanjutnya saya akan mencoba prediksi dengan sampel data teratas
 
@@ -397,7 +397,7 @@ Hasilnya adalah "Diabetes" yang berarti prediksi berhasil.
 
 ### Visualisasi hasil algoritma
 
-Selanjutnya kita akan melihat visualisasi hasil dari algoritma KNN dengan perintah berikut
+Selanjutnya kita akan melihat visualisasi hasil dari algoritma KNN dengan perintah
 
 ```python
 # Fungsi untuk menampilkan plot decision boundary
@@ -424,7 +424,7 @@ plt.show()
 ```
 
 ![](img/visual_knn.png)
-Dapat kita lihat semakin tinggi Glocose semakin besar kemungkinan terkena diabetes, sedangkan blood pressure tidak begitu berpengaruh
+Dapat kita lihat semakin tinggi Glocose semakin besar kemungkinan terkena diabetes, sedangkan blood pressure tidak begitu berpengaruh.
 
 ### Import model
 
