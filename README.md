@@ -454,6 +454,6 @@ Berdasarkan confusion matrix diatas, dapat disimpulkan bahwa model tersebut memp
 
 ## Deployment
 
-Berikut link web app [Diabtes Prediction](https://heart-disease-pred.streamlit.app/Prediksi)
+Berikut link web app [Diabtes Prediction](https://diabetes-knn.streamlit.app/)
 
 ![](img/streamlit.png)
