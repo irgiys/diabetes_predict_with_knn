@@ -1,9 +1,7 @@
 import pickle 
 import streamlit as st
-import pandas as pd
 
 model = pickle.load(open('diabetes_model.sav', 'rb'))
-
 st.set_page_config(
     page_title="Prediksi Diabetes | by Irgiys",
     page_icon="🍭",
@@ -72,7 +70,8 @@ with tab1:
 
 with tab2:
     st.write("Web App ini diciptakan untuk menjadi alat yang membantu individu dalam memeriksa kemungkinan adanya diabetes secara cepat dan mudah. Pentingnya untuk diingat bahwa Web App ini bukan pengganti dari konsultasi medis yang sesungguhnya.")
+    st.markdown('''
+        Dataset [Predict diabetes dataset](https://www.kaggle.com/datasets/whenamancodes/predict-diabities)  
+        Repository [Predict diabetes repos](https://github.com/irgiys/diabetes_predict_with_knn)
+    ''')
     
-    df = pd.read_csv("diabetes.csv")
-    st.markdown("#### Sampel 5 data dalam dataset")
-    st.write(df.head(5))
