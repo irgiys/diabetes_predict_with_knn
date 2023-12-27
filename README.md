@@ -16,7 +16,7 @@ Web App ini bertujuan untuk memberikan aksesibilitas kepada individu untuk memer
 
 ### Problem Statement
 
-Keterbatasan akses atau kesulitan dalam mendapatkan konsultasi medis secara langsung telah menjadi hambatan dalam mengatasi kasus diabetes. Pola hidup yang tidak sehat di masyarakat modern juga telah meningkatkan prevalensi diabetes, menimbulkan tantangan bagi individu untuk mendapatkan evaluasi medis yang tepat dan tepat waktu.
+Keterbatasan akses atau kesulitan dalam mendapatkan konsultasi medis secara langsung telah menjadi hambatan dalam mengatasi kasus diabetes. Pola hidup yang tidak sehat di masyarakat modern juga telah meningkatkan prevalensi diabetes, menimbulkan tantangan bagi individu untuk mendapatkan evaluasi medis yang tepat dan cepat.
 
 ### Goals
 
