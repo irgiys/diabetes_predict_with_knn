@@ -30,7 +30,7 @@ else :
 
 tab1, tab2 = st.tabs(["Prediksi", "Tentang Web App"])
 with tab1:
-    st.write("Untuk melakukan prediksi website ini membutuhkan **8 inputan** dengan ketentuan tertentu sehingga menghasilkan prediksi yang lebih akurat.")
+    st.write("Untuk melakukan prediksi web app ini membutuhkan **8 inputan** dengan ketentuan tertentu sehingga menghasilkan prediksi yang lebih akurat.")
     col1, col2 = st.columns(2)
     with col1:
         Age = st.number_input("Umur", 21,81,age)
