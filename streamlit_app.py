@@ -69,7 +69,7 @@ with tab1:
             st.warning("Pasien terkena diabetes", icon="😔")
 
 with tab2:
-    st.write("Web App ini diciptakan untuk menjadi alat yang membantu individu dalam memeriksa kemungkinan adanya diabetes secara cepat dan mudah. Pentingnya untuk diingat bahwa Web App ini bukan pengganti dari konsultasi medis yang sesungguhnya.")
+    st.write("Web App ini diciptakan untuk menjadi alat yang membantu individu dalam memeriksa kemungkinan adanya diabetes secara cepat dan mudah. Pentingnya untuk diingat bahwa Web App ini bukan pengganti dari konsultasi medis yang sesungguhnya. Beberapa batasan diterapkan dalam pengisian inputan prediksi. Secara khusus, semua pasien didalam yang digunakan adalah perempuan yang berusia minimal 21 tahun dan memiliki keturunan Indian Pima.")
     st.markdown('''
         Dataset [Predict diabetes dataset](https://www.kaggle.com/datasets/whenamancodes/predict-diabities)  
         Repository [Predict diabetes repos](https://github.com/irgiys/diabetes_predict_with_knn)
