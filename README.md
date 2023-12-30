@@ -30,7 +30,7 @@ Menjadi alat bantu bagi individu untuk mengidentifikasi potensi diabetes, memban
 
 ## Data Understanding
 
-Dataset ini berasal dari National Institute of Diabetes and Digestive and Kidney Diseases. Tujuan dari dataset ini adalah untuk memprediksi secara diagnostik apakah seorang pasien menderita diabetes, berdasarkan pengukuran diagnostik tertentu yang ada dalam dataset. Beberapa batasan diterapkan dalam pemilihan contoh-contoh ini dari database yang lebih besar. Secara khusus, semua pasien di sini adalah perempuan yang berusia minimal 21 tahun dan memiliki keturunan Indian Pima.  
+Dataset ini berasal dari National Institute of Diabetes and Digestive and Kidney Diseases. Tujuan dari dataset ini adalah untuk memprediksi secara diagnostik apakah seorang pasien menderita diabetes, berdasarkan pengukuran diagnostik tertentu yang ada dalam dataset. Beberapa batasan diterapkan dalam pengisian inputan. Secara khusus, semua pasien di sini adalah perempuan yang berusia minimal 21 tahun dan memiliki keturunan Indian Pima.  
 Dataset = [Predict diabetes](https://www.kaggle.com/datasets/whenamancodes/predict-diabities)
 
 ### Variabel-variabel pada Diabetes Prediction adalah sebagai berikut:
