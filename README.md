@@ -450,7 +450,7 @@ plt.xlabel('Predicted label')
 
 ![](img/concfu.png)
 
-Berdasarkan confusion matrix diatas, dapat disimpulkan bahwa model tersebut memprediksi label dengan benar untuk 120 data positif dan 60 data negatif. Namun, model tersebut juga membuat kesalahan dalam memprediksi label untuk 28 data positif (FP) dan 30 data negatif (FN).
+Berdasarkan confusion matrix diatas, model ini memiliki True Negatif (TN) 125, (False Positif) FP 28, (False Negatif) 30 FN dan (True Positif) 48 TP
 
 ## Deployment
 
