@@ -53,7 +53,7 @@ with tab1:
         DiabetesPedigreeFunction = st.number_input("Fungsi pedigri diabetes", 0.078,2.42,0.351)
 
     if st.button("Prediksi penyakit Diabetes"):
-        heart_disease_predict = model.predict([[
+        diabetes_predict = model.predict([[
                                                 Pregnancies,
                                                 Glucose,
                                                 BloodPressure,
@@ -63,7 +63,7 @@ with tab1:
                                                 DiabetesPedigreeFunction,
                                                 Age
                                                 ]])
-        if(heart_disease_predict[0]==0):
+        if(diabetes_predict[0]==0):
             st.success("Pasien tidak terkena diabetes",icon="☺️")
         else :
             st.warning("Pasien terkena diabetes", icon="😔")
